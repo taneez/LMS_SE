@@ -10,6 +10,9 @@ const port = 5330;
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use("/" , (req , res) => {
+  res.send("Hello World, server is running");
+});
 // Create a connection pool
 const pool = mysql.createPool({
   host: "localhost",
