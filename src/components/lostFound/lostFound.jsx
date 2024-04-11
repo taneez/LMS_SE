@@ -19,7 +19,9 @@ const LostAndFound = () => {
   };
 
   const handlePost = () => {
-    if (!currentItem.description || !currentItem.image || !currentItem.email) {
+    console.log("HandlePost is clicked")
+    console.log(currentItem)
+    if (!currentItem.description || !currentItem.imageUrl || !currentItem.email) {
       alert("Please fill in description, image upload, and email.");
       return;
     }
@@ -40,6 +42,7 @@ const LostAndFound = () => {
       body: JSON.stringify(newItem),
     })
       .then((response) => {
+        console.log("Response is recieved")
         if (response.ok) {
           console.log("Item posted successfully");
           return response.json();

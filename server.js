@@ -5,7 +5,7 @@ const mysql = require("mysql2");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
 const app = express();
-const port = 3001;
+const port = 5330;
 
 app.use(cors());
 app.use(bodyParser.json());
