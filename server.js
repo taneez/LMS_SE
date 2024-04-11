@@ -222,7 +222,7 @@ app.get('/getComplaints', (req, res) => {
 app.post('/postLostItem', (req, res) => {
   const { type, description, image, email } = req.body;
   const date = new Date().toLocaleString();
-
+  console.log("The server is running fine, as of now");
   const sql = 'INSERT INTO LostAndFound (Date, LostFoundTag, Description, Image, Email) VALUES (?, ?, ?, ?, ?)';
   pool.query(sql, [date, type, description, image, email], (err, result) => {
     if (err) {

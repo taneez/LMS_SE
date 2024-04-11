@@ -32,7 +32,7 @@ const LostAndFound = () => {
     const endpoint =
       currentItem.type === "lost" ? "/postLostItem" : "/postFoundItem";
 
-    fetch(`http://localhost:3001${endpoint}`, {
+    fetch(`https://lms-se.vercel.app/${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
